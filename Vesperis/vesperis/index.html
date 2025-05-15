@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vesperis: Dreamscape Escape</title>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: #000;
+        }
+        canvas {
+            display: none; /* Hidden initially */
+            width: 100%;
+            height: 100vh;
+            outline: none;
+        }
+        #instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            max-width: 300px;
+            z-index: 100;
+            display: none; /* Hidden initially */
+        }
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <canvas id="renderCanvas"></canvas>
+    <div id="instructions">
+        <strong>🌟 Vesperis: Dreamscape Escape 🌟</strong><br>
+        <strong>3rd Person Controls:</strong><br>
+        W/S: Move Forward/Backward | A/D: Turn Left/Right<br>
+        Space: Jump | Mouse: Rotate Camera<br>
+        Collect Dream Fragments (⭐) and find the Exit Portal before time runs out!<br>
+        <em>Avoid the red glowing shadow entity stalking you...</em>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
